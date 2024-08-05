@@ -4,6 +4,7 @@
   --main-color-alt: #1787e0;
   --section-margin: 100px;
   --main-transition: 0.3s;
+  --section-background: #ececec;
 }
 /* End Varibles */
 
@@ -348,7 +349,6 @@ body > header > .container > nav > ul > li:last-of-type:hover .mega-menu {
 }
 /* End Header Style */
 
-
 /* Start Landing Section */
 section.landing {
   min-height: calc(100vh - 72px);
@@ -481,7 +481,6 @@ section.landing .container i {
 }
 /* End Landing Section */
 
-
 /* Start Landing Section */
 section.articals {
   padding-top: var(--section-margin);
@@ -519,13 +518,25 @@ section.articals > .container > .content > .card > figure > figcaption > h4 {
   margin-bottom: 10px;
 }
 
-section.articals > .container > .content > .card > figure > figcaption > p.description {
+section.articals
+  > .container
+  > .content
+  > .card
+  > figure
+  > figcaption
+  > p.description {
   color: #777;
   line-height: 1.6;
   margin-bottom: 10px;
 }
 
-section.articals > .container > .content > .card > figure > figcaption .read-more {
+section.articals
+  > .container
+  > .content
+  > .card
+  > figure
+  > figcaption
+  .read-more {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -534,13 +545,27 @@ section.articals > .container > .content > .card > figure > figcaption .read-mor
   border-top: 1px solid #eee;
 }
 
-section.articals > .container > .content > .card > figure > figcaption .read-more > a {
+section.articals
+  > .container
+  > .content
+  > .card
+  > figure
+  > figcaption
+  .read-more
+  > a {
   text-transform: capitalize;
   font-weight: bold;
   color: var(--main-color);
 }
 
-section.articals > .container > .content > .card:hover > figure > figcaption .read-more > i {
+section.articals
+  > .container
+  > .content
+  > .card:hover
+  > figure
+  > figcaption
+  .read-more
+  > i {
   animation: arrow-to-left 1s linear infinite;
 }
 
@@ -548,6 +573,85 @@ section.articals > .container > .content > .card:hover > figure > figcaption .re
   100% {
     transform: translateX(10px);
   }
-
 }
 /* End Landing Section */
+
+/* Start Gallery Section */
+section.gallery {
+  padding-top: var(--section-margin);
+  margin-top: var(--section-margin);
+  background-color: var(--section-background);
+  position: relative;
+}
+
+section.gallery::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 30px;
+  z-index: 1;
+  background-image: linear-gradient(135deg, white 25%, transparent 25%),
+    linear-gradient(225deg, white 25%, transparent 25%);
+  background-size: 30px;
+}
+
+section.gallery .content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 50px;
+}
+
+section.gallery .content .card {
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 12px 20px 0px rgb(0 0 0 / 13%), 0 2px 4px 0px rgb(0 0 0 / 12%);
+}
+
+section.gallery .content .card > figure {
+  position: relative;
+  overflow: hidden;
+}
+
+section.gallery .content .card > figure img {
+  position: relative;
+  max-width: 100%;
+  transition: var(--main-transition);
+}
+
+section.gallery .content .card > figure::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0px;
+  height: 0px;
+  transform: translate(-50%, -50%);
+  background-color: rgb(255 255 255 / 0.2);
+  z-index: 2;
+  opacity: 0;
+  transition: var(--main-transition);
+}
+
+section.gallery .content .card:hover > figure img {
+  transform: rotate(5deg) scale(1.1);
+}
+
+section.gallery .content .card:hover > figure::before {
+  animation: flashing 0.7s linear;
+}
+
+@keyframes flashing {
+  0%,
+  40% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    width: 200%;
+    height: 200%;
+  }
+}
+/* End Gallery Section */
