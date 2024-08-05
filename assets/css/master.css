@@ -660,6 +660,7 @@ section.gallery .content .card:hover > figure::before {
 /* Start Feature Section */
 section.feature {
   padding-top: var(--section-margin);
+  padding-bottom: var(--section-margin);
 }
 
 section.feature .content {
@@ -825,3 +826,61 @@ section.feature .content .card:hover figcaption button::before {
 }
 
 /* End Feature Section */
+
+
+/* Start Testimonials Section */
+section.testimonials {
+  padding-top: var(--section-margin);
+  padding-bottom: var(--section-margin);
+  background-color: var(--section-background);
+}
+
+section.testimonials .container .content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+section.testimonials .container .content .card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 7%);
+  position: relative;
+}
+
+section.testimonials .container .content .card > .title {
+  text-transform: capitalize;
+  font-size: 18px;
+  padding: 10px 0;
+}
+
+section.testimonials .container .content .card > .job {
+  text-transform: capitalize;
+  font-weight: normal;
+  color: #777;
+  font-size: 1rem;
+}
+
+section.testimonials .container .content .card > .stars {
+  padding: 10px 0;
+}
+
+section.testimonials .container .content .card > .stars > i.filled {
+  color: #ffc107;
+}
+
+section.testimonials .container .content .card > p.description {
+  line-height: 1.6;
+  color: #777;
+}
+
+section.testimonials .container .content .card > img {
+  width: 110px;
+  position: absolute;
+  right: -10px;
+  top: -40px;
+  border-radius: 50%;
+  border: 15px solid var(--section-background);
+}
+/* End Testimonials Section */
