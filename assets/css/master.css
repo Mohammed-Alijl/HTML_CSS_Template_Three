@@ -480,3 +480,74 @@ section.landing .container i {
   }
 }
 /* End Landing Section */
+
+
+/* Start Landing Section */
+section.articals {
+  padding-top: var(--section-margin);
+}
+
+section.articals > .container > .content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+section.articals > .container > .content .card {
+  box-shadow: 0 0 15px #ddd;
+  border-radius: 6px;
+  transition: var(--main-transition);
+}
+
+section.articals > .container > .content .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px #ccc;
+}
+
+section.articals > .container > .content > .card > figure > img {
+  max-width: 100%;
+  border-radius: 6px;
+}
+
+section.articals > .container > .content > .card > figure > figcaption {
+  padding: 20px;
+}
+
+section.articals > .container > .content > .card > figure > figcaption > h4 {
+  text-transform: capitalize;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+section.articals > .container > .content > .card > figure > figcaption > p.description {
+  color: #777;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+section.articals > .container > .content > .card > figure > figcaption .read-more {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--main-color);
+  padding-top: 10px;
+  border-top: 1px solid #eee;
+}
+
+section.articals > .container > .content > .card > figure > figcaption .read-more > a {
+  text-transform: capitalize;
+  font-weight: bold;
+  color: var(--main-color);
+}
+
+section.articals > .container > .content > .card:hover > figure > figcaption .read-more > i {
+  animation: arrow-to-left 1s linear infinite;
+}
+
+@keyframes arrow-to-left {
+  100% {
+    transform: translateX(10px);
+  }
+
+}
+/* End Landing Section */
