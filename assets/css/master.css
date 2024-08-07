@@ -656,7 +656,6 @@ section.gallery .content .card:hover > figure::before {
 }
 /* End Gallery Section */
 
-
 /* Start Feature Section */
 section.feature {
   padding-top: var(--section-margin);
@@ -827,7 +826,6 @@ section.feature .content .card:hover figcaption button::before {
 
 /* End Feature Section */
 
-
 /* Start Testimonials Section */
 section.testimonials {
   padding-top: var(--section-margin);
@@ -884,7 +882,6 @@ section.testimonials .container .content .card > img {
   border: 15px solid var(--section-background);
 }
 /* End Testimonials Section */
-
 
 /* Start Team Members Section */
 section.team-members {
@@ -979,3 +976,145 @@ section.team-members .container > .content > .card > .social-media a:hover i {
 }
 /* End Team Members Section */
 
+/* Start Services Section */
+section.services {
+  padding-top: var(--section-margin);
+  padding-bottom: var(--section-margin);
+  background-color: var(--section-background);
+  position: relative;
+}
+
+section.services::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 30px;
+  z-index: 1;
+  background-image: linear-gradient(135deg, white 25%, transparent 25%),
+    linear-gradient(225deg, white 25%, transparent 25%);
+  background-size: 30px;
+}
+
+section.services .content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+section.services .content > .card {
+  background-color: #fff;
+  box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
+  text-align: center;
+  position: relative;
+  transition: var(--main-transition);
+  counter-increment: services;
+  padding-top: 20px;
+}
+
+section.services .content > .card:hover {
+  transform: translateY(-5px);
+}
+
+section.services .content > .card::before {
+  content: "";
+  width: 0;
+  height: 3px;
+  position: absolute;
+  right: 50%;
+  top: 0;
+  background-color: var(--main-color);
+  transition: var(--main-transition);
+}
+
+section.services .content > .card::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  background-color: var(--main-color);
+  transition: var(--main-transition);
+}
+
+section.services .content > .card:hover::after {
+  width: 50%;
+}
+
+section.services .content > .card:hover::before {
+  width: 50%;
+}
+
+section.services .content > .card i {
+  color: #d5d5d5;
+  margin: 20px auto 10px;
+}
+
+section.services .content > .card > h4 {
+  font-size: 25px;
+  color: var(--main-color);
+  text-transform: capitalize;
+  margin: 10px auto 20px;
+}
+
+section.services .content > .card > .details {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  padding: 15px;
+  background-color: #f9f9f9;
+}
+
+section.services .content > .card > .details::before {
+  content: "0" counter(services);
+  width: 80px;
+  height: 100%;
+  color: white;
+  background-color: var(--main-color);
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 30px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 15px;
+}
+
+section.services .content > .card > .details::after {
+  content: "";
+  background-color: #d5d5d5;
+  width: 50px;
+  height: calc(100% + 0.4px);
+  position: absolute;
+  left: 80px;
+  top: 0;
+  transform: skew(-30deg);
+}
+
+section.services .content > .card > .details a {
+  color: var(--main-color);
+  text-transform: capitalize;
+  position: relative;
+  overflow: hidden;
+  transition: var(--main-transition);
+}
+
+section.services .content > .card > .details a::before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: var(--main-color);
+  position: absolute;
+  bottom: 0px;
+  left: -100%;
+  transition: var(--main-transition);
+}
+
+section.services .content > .card > .details a:hover:before {
+  left: 0;
+}
+/* End Services Section */
