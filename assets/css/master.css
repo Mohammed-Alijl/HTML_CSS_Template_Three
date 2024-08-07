@@ -884,3 +884,98 @@ section.testimonials .container .content .card > img {
   border: 15px solid var(--section-background);
 }
 /* End Testimonials Section */
+
+
+/* Start Team Members Section */
+section.team-members {
+  padding-top: var(--section-margin);
+  padding-bottom: var(--section-margin);
+}
+
+section.team-members .container > .content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+section.team-members .container > .content > .card {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+section.team-members .container > .content > .card::before {
+  content: "";
+  background-color: var(--section-background);
+  width: 90%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-radius: 6px;
+  z-index: -2;
+}
+
+section.team-members .container > .content > .card::after {
+  content: "";
+  background-color: #ddd;
+  width: 90%;
+  height: 100%;
+  position: absolute;
+  right: -100%;
+  top: 0;
+  transition: var(--main-transition);
+  z-index: -1;
+}
+
+section.team-members .container > .content > .card:hover::after {
+  right: 0;
+}
+
+section.team-members .container > .content > .card > figure {
+  border-radius: 6px;
+}
+
+section.team-members .container > .content > .card > figure > img {
+  max-width: 100%;
+  border-radius: 6px;
+  transform: translate3d(0, 0, 10px);
+  margin-top: 20%;
+  transition: var(--main-transition);
+}
+
+section.team-members .container > .content > .card:hover > figure > img {
+  filter: grayscale(1);
+}
+
+section.team-members .container > .content > .card > figure > figcaption {
+  padding-left: 80px;
+}
+
+section.team-members .container > .content > .card > figure > figcaption h4 {
+  color: var(--main-color);
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 25px;
+}
+
+section.team-members .container > .content > .card > figure > figcaption p {
+  padding-bottom: 20px;
+}
+
+section.team-members .container > .content > .card > .social-media {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+section.team-members .container > .content > .card > .social-media i {
+  margin: 20px;
+  color: #777;
+}
+
+section.team-members .container > .content > .card > .social-media a:hover i {
+  color: var(--main-color);
+}
+/* End Team Members Section */
+
