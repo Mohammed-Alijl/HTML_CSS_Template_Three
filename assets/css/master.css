@@ -1128,9 +1128,25 @@ section.skills {
 
 section.skills .content {
   display: flex;
+  gap: 40px;
+}
+
+section.skills .content > div {
+  display: flex;
   flex-direction: column;
   gap: 30px;
   padding: 20px;
+  width: 100%;
+}
+
+section.skills .content > img {
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  section.skills .content > img {
+    display: none;
+  }
 }
 
 section.skills .content div h3 {
@@ -1159,35 +1175,35 @@ section.skills .content div .bar::after {
   padding: 3px;
 }
 
-section.skills .content div:first-of-type .bar {
+section.skills .content div div:first-of-type .bar {
   background-image: linear-gradient(to right, var(--main-color) 80%, #ececec 80%);
 }
 
-section.skills .content div:first-of-type .bar::after {
+section.skills .content div div:first-of-type .bar::after {
   content: "80%";
 }
 
-section.skills .content div:nth-of-type(2) .bar {
+section.skills .content div div:nth-of-type(2) .bar {
   background-image: linear-gradient(to right, var(--main-color) 85%, #ececec 85%);
 }
 
-section.skills .content div:nth-of-type(2) .bar::after {
+section.skills .content div div:nth-of-type(2) .bar::after {
   content: "85%";
 }
 
-section.skills .content div:nth-of-type(3) .bar {
+section.skills .content div div:nth-of-type(3) .bar {
   background-image: linear-gradient(to right, var(--main-color) 70%, #ececec 70%);
 }
 
-section.skills .content div:nth-of-type(3) .bar::after {
+section.skills .content div div:nth-of-type(3) .bar::after {
   content: "70%";
 }
 
-section.skills .content div:last-of-type .bar {
+section.skills .content div div:last-of-type .bar {
   background-image: linear-gradient(to right, var(--main-color) 95%, #ececec 95%);
 }
 
-section.skills .content div:last-of-type .bar::after {
+section.skills .content div div:last-of-type .bar::after {
   content: "95%";
 }
 /* End Skills Section */
