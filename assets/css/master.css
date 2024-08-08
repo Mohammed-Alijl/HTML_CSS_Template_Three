@@ -1303,3 +1303,140 @@ section.how-works .card:not(:last-child) {
   margin-bottom: 20px;
 }
 /* End How Works Section */
+
+
+/* Start Events Section */
+section.events {
+  padding-top: var(--section-margin);
+  padding-bottom: var(--section-margin);
+}
+
+section.events .content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 150px;
+}
+
+section.events .content img {
+  max-width: 35%;
+}
+
+section.events .content > div {
+  flex-basis: 60%;
+}
+
+@media (max-width: 768px) {
+  section.events .content {
+    justify-content: center;
+  }
+
+  section.events .content img {
+    display: none;
+  }
+
+  section.events .content div {
+    flex: 100%;
+  }
+}
+
+section.events .content > div > article.time {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+section.events .content > div > article.time .unit {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  text-align: center;
+  transition: var(--main-transition);
+}
+
+section.events .content > div > article.time .unit:hover {
+  border: 1px solid var(--main-color);
+}
+
+section.events .content > div > article.time .unit span:first-of-type {
+  font-size: 35px;
+  font-weight: bold;
+  color: var(--main-color);
+  padding: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+section.events .content > div > article.time .unit span:last-of-type {
+  padding: 10px;
+  font-size: 14px;
+}
+
+section.events .content > div > article.info {
+  text-align: center;
+}
+
+section.events .content > div > article.info h2 {
+  padding: 20px;
+  font-size: 30px;
+}
+
+section.events .content > div > article.info p {
+  line-height: 1.7;
+  color: #777;
+  font-size: 20px;
+}
+
+section.events article.subscribe {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+section.events article.subscribe form {
+  width: 600px;
+  max-width: 100%;
+  margin: 20px auto;
+  padding: 30px 40px;
+  background-color: #f6f5f5;
+  border-radius: 50px;
+  display: flex;
+  gap: 20px;
+}
+
+section.events article.subscribe form input[type='email'] {
+  border-radius: 50px;
+  border: none;
+  padding: 20px;
+  width: 80%;
+  caret-color: var(--main-color);
+  transition: var(--main-transition);
+  color: #777;
+  font-size: 18px;
+}
+
+section.events article.subscribe form input[type='email']:focus {
+  outline: none;
+}
+
+section.events article.subscribe form input[type='email']:focus::placeholder {
+  opacity: 0;
+  transition: var(--main-transition);
+}
+
+section.events article.subscribe form input[type='submit'] {
+  padding: 20px;
+  background-color: var(--main-color);
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: var(--main-transition);
+}
+
+section.events article.subscribe form input[type='submit']:hover {
+  background-color: var(--main-color-alt);
+}
+/* End Events Section */
