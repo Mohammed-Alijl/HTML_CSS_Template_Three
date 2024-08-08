@@ -954,6 +954,11 @@ section.team-members .container > .content > .card > figure > figcaption h4 {
   padding-top: 15px;
   padding-bottom: 15px;
   font-size: 25px;
+  transition: var(--main-transition);
+}
+
+section.team-members .container > .content > .card:hover > figure > figcaption h4 {
+  color: #777;
 }
 
 section.team-members .container > .content > .card > figure > figcaption p {
