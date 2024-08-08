@@ -1835,3 +1835,165 @@ section.state .content .card span {
   text-transform: capitalize;
 }
 /* End State Section */
+
+
+/* Start State Section */
+section.discount {
+  background-color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  padding-bottom: 50px;
+}
+
+section.discount > div:first-of-type {
+  color: white;
+  position: relative;
+  background-image: url('./../img/discount-background1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 1;
+  flex-basis: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  animation: change-background-image 3s linear infinite;
+}
+
+@keyframes change-background-image {
+  0% ,100%{
+    background-image: url('./../img/discount-background1.jpg');
+  }
+  50% {
+    background-image: url('./../img/discount-background2.jpg');
+}
+}
+
+section.discount > div:first-of-type > .content {
+  padding: 0 20px;
+  text-align: center;
+}
+
+section.discount > div:first-of-type::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color:  rgb(33 150 243 / 97%);
+  z-index: -1;
+}
+
+section.discount > div:first-of-type h3 {
+  font-size: 40px;
+  text-transform: capitalize;
+  margin: 30px auto;
+  letter-spacing: -2px;
+}
+
+section.discount > div:first-of-type p {
+  max-width: 500px;
+  line-height: 1.6;
+  font-size: 18px;
+}
+
+section.discount > div:first-of-type img {
+  width: 300px;
+  max-width: 100%;
+}
+
+section.discount > .form {
+  flex-basis: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section.discount > .form > .content {
+  text-align: center;
+  padding: 0 20px;
+}
+
+section.discount > .form > .content h2 {
+  font-size: 40px;
+  letter-spacing: -2px;
+}
+
+section.discount > .form > .content form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+section.discount > .form > .content form input {
+  padding: 15px;
+  margin-bottom: 25px;
+  border: none;
+  caret-color: var(--main-color);
+  background-color: #f9f9f9;
+  color: #777;
+  display: block;
+  width: 100%;
+}
+
+section.discount > .form > .content form input:focus,
+section.discount > .form > .content form textarea:focus {
+  outline: none;
+}
+
+section.discount > .form > .content form input::placeholder,
+section.discount > .form > .content form textarea::placeholder {
+  color: #777;
+}
+
+section.discount > .form > .content form input:focus::placeholder,
+section.discount > .form > .content form textarea:focus::placeholder {
+  transition: var(--main-transition);
+  opacity: 0;
+}
+
+section.discount > .form > .content form textarea {
+  border: none;
+  color: #777;
+  caret-color: var(--main-color);
+  height: 200px;
+  margin-bottom: 25px;
+  resize: none;
+  padding: 15px;
+}
+
+section.discount > .form > .content form input:not([type="submit"]),
+section.discount > .form > .content form textarea {
+  border-bottom: 1px solid #ccc;
+}
+
+section.discount > .form > .content form input[type="submit"] {
+  background-color: var(--main-color);
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+  transition: var(--main-transition);
+}
+
+section.discount > .form > .content form input[type="submit"]:hover {
+  background-color: var(--main-color-alt);
+}
+
+@media (max-width: 991px) {
+  section.discount > div:first-of-type {
+    flex-basis: 100%;
+  }
+
+  section.discount > .form {
+    flex-basis: 100%;
+  }
+
+  section.discount > .form > .content h2 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
+/* End State Section */
