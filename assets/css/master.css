@@ -1254,7 +1254,7 @@ section.how-works .content > img {
   margin-right: 100px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   section.how-works .content {
     flex-direction: column;
     justify-content: center;
