@@ -1655,3 +1655,74 @@ section.price .content > figure {
   }
 }
 /* End Price Section */
+
+
+/* Start Top Videos Section */
+section.top-videos {
+  padding-top: var(--section-margin);
+  padding-bottom: var(--section-margin);
+}
+
+section.top-videos .content {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #ddd;
+}
+
+@media (max-width: 991px) {
+  section.top-videos .content {
+    flex-direction: column;
+  }
+}
+
+section.top-videos .content > div:first-of-type {
+  flex-basis: 30%;
+}
+
+section.top-videos .content > div:first-of-type > .title {
+  display: flex;
+  justify-content: space-between;
+  text-transform: capitalize;
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+section.top-videos .content > div:first-of-type li {
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+  transition: var(--main-transition);
+  cursor: pointer;
+}
+
+section.top-videos .content > div:first-of-type li:hover {
+  color: var(--main-color);
+}
+
+section.top-videos .content > div:first-of-type li span {
+  display: block;
+  color: #777;
+  margin-top: 10px;
+}
+
+section.top-videos .content > div:last-of-type {
+  flex-basis: 70%;
+  padding: 10px;
+  background-color: var(--section-background);
+  position: relative;
+}
+
+section.top-videos .content > div:last-of-type > figure > img {
+  max-width: 100%;
+}
+
+section.top-videos .content > div:last-of-type > .title {
+  background-color: #fff;
+  padding: 20px;
+  position: absolute;
+  left: 2%;
+  bottom: 10px;
+  width: 96%;
+  margin-top: 70px;
+}
+/* End Top Videos Section */
