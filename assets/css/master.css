@@ -1119,7 +1119,6 @@ section.services .content > .card > .details a:hover:before {
 }
 /* End Services Section */
 
-
 /* Start Skills Section */
 section.skills {
   padding-top: var(--section-margin);
@@ -1176,7 +1175,11 @@ section.skills .content div .bar::after {
 }
 
 section.skills .content div div:first-of-type .bar {
-  background-image: linear-gradient(to right, var(--main-color) 80%, #ececec 80%);
+  background-image: linear-gradient(
+    to right,
+    var(--main-color) 80%,
+    #ececec 80%
+  );
 }
 
 section.skills .content div div:first-of-type .bar::after {
@@ -1184,7 +1187,11 @@ section.skills .content div div:first-of-type .bar::after {
 }
 
 section.skills .content div div:nth-of-type(2) .bar {
-  background-image: linear-gradient(to right, var(--main-color) 85%, #ececec 85%);
+  background-image: linear-gradient(
+    to right,
+    var(--main-color) 85%,
+    #ececec 85%
+  );
 }
 
 section.skills .content div div:nth-of-type(2) .bar::after {
@@ -1192,7 +1199,11 @@ section.skills .content div div:nth-of-type(2) .bar::after {
 }
 
 section.skills .content div div:nth-of-type(3) .bar {
-  background-image: linear-gradient(to right, var(--main-color) 70%, #ececec 70%);
+  background-image: linear-gradient(
+    to right,
+    var(--main-color) 70%,
+    #ececec 70%
+  );
 }
 
 section.skills .content div div:nth-of-type(3) .bar::after {
@@ -1200,14 +1211,17 @@ section.skills .content div div:nth-of-type(3) .bar::after {
 }
 
 section.skills .content div div:last-of-type .bar {
-  background-image: linear-gradient(to right, var(--main-color) 95%, #ececec 95%);
+  background-image: linear-gradient(
+    to right,
+    var(--main-color) 95%,
+    #ececec 95%
+  );
 }
 
 section.skills .content div div:last-of-type .bar::after {
   content: "95%";
 }
 /* End Skills Section */
-
 
 /* Start How Works Section */
 section.how-works {
@@ -1245,7 +1259,7 @@ section.how-works .content > img {
     flex-direction: column;
     justify-content: center;
   }
-  
+
   section.how-works .content > img {
     margin: 10px auto 30px;
   }
@@ -1303,7 +1317,6 @@ section.how-works .card:not(:last-child) {
   margin-bottom: 20px;
 }
 /* End How Works Section */
-
 
 /* Start Events Section */
 section.events {
@@ -1405,7 +1418,7 @@ section.events article.subscribe form {
   gap: 20px;
 }
 
-section.events article.subscribe form input[type='email'] {
+section.events article.subscribe form input[type="email"] {
   border-radius: 50px;
   border: none;
   padding: 20px;
@@ -1416,16 +1429,16 @@ section.events article.subscribe form input[type='email'] {
   font-size: 18px;
 }
 
-section.events article.subscribe form input[type='email']:focus {
+section.events article.subscribe form input[type="email"]:focus {
   outline: none;
 }
 
-section.events article.subscribe form input[type='email']:focus::placeholder {
+section.events article.subscribe form input[type="email"]:focus::placeholder {
   opacity: 0;
   transition: var(--main-transition);
 }
 
-section.events article.subscribe form input[type='submit'] {
+section.events article.subscribe form input[type="submit"] {
   padding: 20px;
   background-color: var(--main-color);
   color: white;
@@ -1436,7 +1449,194 @@ section.events article.subscribe form input[type='submit'] {
   transition: var(--main-transition);
 }
 
-section.events article.subscribe form input[type='submit']:hover {
+section.events article.subscribe form input[type="submit"]:hover {
   background-color: var(--main-color-alt);
 }
 /* End Events Section */
+
+/* Start Price Section */
+section.price {
+  padding-top: var(--section-margin);
+  padding-bottom: var(--section-margin);
+  background-color: var(--section-background);
+}
+
+section.price .content {
+  display: flex;
+  justify-content: space-between;
+}
+
+section.price .content > .cards {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+section.price .content > div > .card {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 12px 20px 0px rgb(0 0 0 / 13%), 0 2px 4px 0px rgb(0 0 0 / 12%);
+  transform: translateZ(25px);
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+}
+
+section.price .content > div > .card::before {
+  content: "";
+  position: absolute;
+  left: -100%;
+  top: 0;
+  width: 100%;
+  height: 50%;
+  background-color: rgb(0 0 0 / 4%);
+  transition: var(--main-transition);
+}
+
+section.price .content > div > .card::after {
+  content: "";
+  position: absolute;
+  right: -100%;
+  top: 50%;
+  width: 100%;
+  height: 50%;
+  background-color: rgb(0 0 0 / 4%);
+  transition: var(--main-transition);
+}
+
+section.price .content > div > .card:hover::before {
+  left: 0;
+}
+
+section.price .content > div > .card:hover::after {
+  right: 0;
+}
+
+section.price .content > div > .card:nth-child(2) > .label {
+  position: absolute;
+  right: -40px;
+  top: 60px;
+  background-color: var(--main-color);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: capitalize;
+  padding: 10px 40px 10px 10px;
+  transform: rotate(90deg);
+}
+
+section.price .content > div > .card:nth-child(2) > .label::after {
+  content: "";
+  position: absolute;
+  right: -10px;
+  top: 1px;
+  background-color: var(--main-color);
+  width: 0;
+  height: 0;
+  z-index: 1;
+  border: 20px solid black;
+  border-color: transparent white transparent transparent;
+}
+
+section.price .content > div > .card > h3 {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+section.price .content > div > .card > img {
+  width: 80px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 30px;
+}
+
+section.price .content > div > .card > .price {
+  color: var(--main-color);
+  font-size: 60px;
+  font-weight: bold;
+}
+
+section.price .content > div > .card > .per {
+  text-align: center;
+  text-transform: capitalize;
+  color: #777;
+  margin-top: -10px;
+}
+
+section.price .content > div > .card > ul.features {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+section.price .content > div > .card > ul.features > li {
+  border-top: 1px solid #eee;
+  padding: 20px 0;
+  position: relative;
+}
+
+section.price .content > div > .card > ul.features > li::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f00c";
+  margin-right: 10px;
+  font-weight: 900;
+  color: var(--main-color);
+}
+
+section.price .content > div > .card > button {
+  padding: 15px 20px;
+  text-transform: capitalize;
+  font-weight: bold;
+  background-color: #fff;
+  color: var(--main-color);
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 2px solid var(--main-color);
+  border-radius: 6px;
+  transition: var(--main-transition);
+  overflow: hidden;
+  z-index: 1;
+  cursor: pointer;
+}
+
+section.price .content > div > .card > button:hover {
+  color: #fff;
+}
+
+section.price .content > div > .card > button::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-color);
+  position: absolute;
+  left: -100%;
+  top: 0;
+  transition: var(--main-transition);
+  z-index: -1;
+}
+
+section.price .content > div > .card > button:hover::after {
+  left: 0;
+}
+
+section.price .content > figure:first-of-type {
+  align-self: flex-end;
+}
+
+section.price .content > figure {
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  section.price .content > figure {
+    display: block;
+  }
+  section.price .content > div > .card:nth-child(2) {
+    transform: translate3d(0, -25px, 10px);
+  }
+}
+/* End Price Section */
