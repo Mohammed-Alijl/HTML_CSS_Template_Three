@@ -117,8 +117,4 @@ This template is free to use for both personal and commercial projects. Attribut
 
 ## Author
 
-Created by Mohamed Ali
-
-## Support
-
-For support or questions, please contact the author through the repository issues page.
+Created by Mohamed Alajel
